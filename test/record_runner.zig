@@ -233,9 +233,9 @@ fn runCaseExtra(io: Io, aro_exe: []const u8, test_case: TestCase, stats: *Stats)
     }
 
     var child = process.Child.init(args.items, arena);
-    child.stdout_behavior = .Ignore;
-    child.stderr_behavior = .Pipe;
-    child.stdin_behavior = .Ignore;
+    child.stdout_behavior = .ignore;
+    child.stderr_behavior = .pipe;
+    child.stdin_behavior = .ignore;
 
     child.request_resource_usage_statistics = true;
 

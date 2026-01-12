@@ -121,9 +121,9 @@ fn runCaseExtra(
     args.appendSliceAssumeCapacity(case.args);
 
     var child = process.Child.init(args.items, arena);
-    child.stdout_behavior = .Pipe;
-    child.stderr_behavior = .Pipe;
-    child.stdin_behavior = .Ignore;
+    child.stdout_behavior = .pipe;
+    child.stderr_behavior = .pipe;
+    child.stdin_behavior = .ignore;
     child.cwd = cases_dir;
 
     child.request_resource_usage_statistics = true;
